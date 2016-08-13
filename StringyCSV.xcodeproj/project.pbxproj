@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813F6DAC1D5FDF40005FD6A1 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813F6DAB1D5FDF40005FD6A1 /* CSwiftV.swift */; };
 		81541ABA1D5E5548000DA67C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81541AB91D5E5548000DA67C /* main.swift */; };
 		81A494101D5E5EFC00945F2A /* String+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4940F1D5E5EFC00945F2A /* String+Strings.swift */; };
 		81A494121D5E717E00945F2A /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A494111D5E717E00945F2A /* CSV.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		813F6DAB1D5FDF40005FD6A1 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSwiftV.swift; sourceTree = "<group>"; };
 		81541AB61D5E5548000DA67C /* StringyCSV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringyCSV; sourceTree = BUILT_PRODUCTS_DIR; };
 		81541AB91D5E5548000DA67C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		81A4940F1D5E5EFC00945F2A /* String+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Strings.swift"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				81A494131D5E7F2800945F2A /* Strings.swift */,
 				81A494151D5E8BDE00945F2A /* StringsToCSV.swift */,
 				81A4940F1D5E5EFC00945F2A /* String+Strings.swift */,
+				813F6DAB1D5FDF40005FD6A1 /* CSwiftV.swift */,
 			);
 			path = StringyCSV;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				81A494101D5E5EFC00945F2A /* String+Strings.swift in Sources */,
 				81A494141D5E7F2800945F2A /* Strings.swift in Sources */,
 				81A494161D5E8BDE00945F2A /* StringsToCSV.swift in Sources */,
+				813F6DAC1D5FDF40005FD6A1 /* CSwiftV.swift in Sources */,
 				81A494121D5E717E00945F2A /* CSV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

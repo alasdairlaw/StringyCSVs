@@ -24,20 +24,35 @@ enum Locale: String {
     static func allLocales() -> [Locale] {
         return [.English, .German]
     }
+    
+    static func baseLocale() -> Locale {
+        return Locale.English
+    }
 }
 
 struct Strings {
     var entries = [String: (values: [Locale: String], comment: String)]()
     private var locales = [Locale]()
     
+    mutating func addEntry(entry: (key: String, value: String, comment: String), locale: Locale) {
+        if self.entries[entry.key] != nil {
+            self.entries[entry.key]!.values[locale] = entry.value
+        }
+    }
+}
+
+extension Strings: Localizable {
+    
     func getLocales() -> [Locale] {
         return self.locales.sort({ (localeA, localeB) -> Bool in
             return localeA.rawValue < localeB.rawValue
         })
     }
+    
 }
 
 extension Strings: Serializable {
+    
     init(name: String, path: String) throws {
         let locales = Locale.allLocales()
         
@@ -92,9 +107,7 @@ extension Strings: Serializable {
             })
             for entryKey in entryKeys {
                 let entry = self.entries[entryKey]!
-                guard let entryValue = entry.values[locale] else {
-                    continue
-                }
+                let entryValue = entry.values[locale] ?? ""
                 let commentString = "/* \(entry.comment) */"
                 let entryString = "\"\(entryKey)\" = \"\(entryValue)\";"
                 
@@ -107,4 +120,5 @@ extension Strings: Serializable {
         
         return fileStrings
     }
+    
 }
