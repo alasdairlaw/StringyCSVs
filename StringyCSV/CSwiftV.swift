@@ -93,8 +93,9 @@ public class CSwiftV {
         let initial = string.componentsSeparatedByString(separator)
         var merged = [String]()
         for newString in initial {
+            let escapedNewString = newString.stringByReplacingOccurrencesOfString("\\\"\"", withString: "\\\"")
             guard let record = merged.last where oddNumberOfQuotes(record) == true else {
-                merged.append(newString)
+                merged.append(escapedNewString)
                 continue
             }
             merged.removeLast()

@@ -24,7 +24,7 @@ struct StringsToSCV {
         }
         
         let sortedRows = rows.sort { (rowA, rowB) -> Bool in
-            rowA.first! < rowB.first!
+            rowA.first!.lowercaseString < rowB.first!.lowercaseString
         }
         
         csv.addRows(sortedRows)

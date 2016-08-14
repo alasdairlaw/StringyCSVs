@@ -99,4 +99,8 @@ extension String {
             return []
         }
     }
+    
+    func stringByDeletingPathExtension() -> String {
+        return (self as NSString).stringByDeletingPathExtension
+    }
 }

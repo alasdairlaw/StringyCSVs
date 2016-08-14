@@ -63,11 +63,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/alasdairlaw"
+            argument = "/Users/alasdairlaw/Documents/SourceTree/Work/intelligentpos/i-pos"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Config"
+            argument = "/Users/alasdairlaw/Documents"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

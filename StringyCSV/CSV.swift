@@ -57,7 +57,8 @@ extension CSV: Serializable {
     func toString() -> [String] {
         let csvString = self.rows.reduce("") { (string, row) -> String in
             let rowString = row.reduce("") { (string, element) -> String in
-                "\(string)\(string.length > 0 ? "," : "")\"\(element)\""
+                let escapedElement = element.stringByReplacingOccurrencesOfString("\"", withString: "\"\"")
+                return "\(string)\(string.length > 0 ? "," : "")\"\(escapedElement)\""
             }
             return "\(string)\(rowString)\r\n"
         }
